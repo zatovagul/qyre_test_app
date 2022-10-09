@@ -1,0 +1,122 @@
+import 'package:flutter/material.dart';
+
+import '../constants/main_style_constants.dart';
+
+final mainThemeData = ThemeData(
+  fontFamily: MainStyleConstants.matterFont,
+  primaryColor: MainStyleConstants.darkGrey,
+  unselectedWidgetColor: MainStyleConstants.white,
+  appBarTheme: const AppBarTheme(
+    elevation: 0,
+    titleTextStyle: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 18,
+      color: MainStyleConstants.darkGrey,
+    ),
+    backgroundColor: MainStyleConstants.white,
+  ),
+  colorScheme: _colorScheme,
+  textTheme: const TextTheme(
+    headline1: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 14,
+      color: MainStyleConstants.darkGrey,
+    ),
+    headline2: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 16,
+      color: MainStyleConstants.darkGrey,
+    ),
+    headline3: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 14,
+      color: MainStyleConstants.darkGrey,
+    ),
+    headline4: TextStyle(
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 10,
+      color: MainStyleConstants.grey,
+    ),
+    headline5: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 10,
+      color: MainStyleConstants.whiteGrey,
+    ),
+    headline6: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 18,
+      color: MainStyleConstants.darkGrey,
+    ),
+    subtitle1: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 12,
+      color: MainStyleConstants.white,
+    ),
+    subtitle2: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 10,
+      color: MainStyleConstants.white,
+    ),
+    bodyText1: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 16,
+      color: MainStyleConstants.white,
+    ),
+    bodyText2: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 10,
+      color: MainStyleConstants.white,
+    ),
+    button: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 14,
+      color: MainStyleConstants.white,
+    ),
+  ),
+  scaffoldBackgroundColor: MainStyleConstants.white,
+  dividerColor: MainStyleConstants.lightGrey,
+  backgroundColor: MainStyleConstants.white,
+  canvasColor: MainStyleConstants.white,
+);
+
+const _colorScheme = ColorScheme(
+  brightness: Brightness.dark,
+  primary: MainStyleConstants.darkGrey,
+  onPrimary: MainStyleConstants.lightGrey,
+  primaryContainer: MainStyleConstants.lightBlue,
+  error: MainStyleConstants.red,
+  background: MainStyleConstants.white,
+  onBackground: MainStyleConstants.lightGrey,
+  onError: MainStyleConstants.grey,
+  onErrorContainer: MainStyleConstants.whiteGrey,
+  secondary: MainStyleConstants.orangeStart,
+  onSecondary: MainStyleConstants.orangeEnd,
+  tertiary: MainStyleConstants.blueStart,
+  onTertiary: MainStyleConstants.blueEnd,
+  surface: MainStyleConstants.purpleStart,
+  onSurface: MainStyleConstants.purpleEnd,
+);

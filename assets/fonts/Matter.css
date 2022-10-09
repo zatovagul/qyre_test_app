@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Matter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./matter-light.otf') format('opentype'), url('./matter-light.eot') format('embedded-opentype'),
+    url('./matter-light.woff') format('woff'), url('./matter-light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Matter';
+  font-style: bold;
+  font-weight: 700;
+  src: url('./matter-semibold.otf') format('opentype'), url('./matter-semibold.eot') format('embedded-opentype'),
+    url('./matter-semibold.woff') format('woff'), url('./matter-semibold.woff2') format('woff2');
+}
