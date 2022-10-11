@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../l10n/localization_helper.dart';
+
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
 
@@ -10,6 +12,15 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            title: Text(context.strings.myAvailabiliy),
+            centerTitle: false,
+          ),
+        ],
+      ),
+    );
   }
 }

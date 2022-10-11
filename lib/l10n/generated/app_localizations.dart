@@ -91,6 +91,11 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
+  /// No description provided for @myAvailabiliy.
+  ///
+  /// In en, this message translates to:
+  /// **'My Availability'**
+  String get myAvailabiliy;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

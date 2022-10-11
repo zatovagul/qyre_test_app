@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class MenuTab extends StatefulWidget {
@@ -12,6 +10,11 @@ class MenuTab extends StatefulWidget {
 class _MenuTabState extends State<MenuTab> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text(
+        'Menu Tab',
+        style: Theme.of(context).textTheme.headline1,
+      ),
+    );
   }
 }
