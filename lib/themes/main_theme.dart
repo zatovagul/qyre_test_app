@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../constants/main_style_constants.dart';
 
 final mainThemeData = ThemeData(
+  brightness: Brightness.light,
   fontFamily: MainStyleConstants.matterFont,
   primaryColor: MainStyleConstants.darkGrey,
-  unselectedWidgetColor: MainStyleConstants.white,
   appBarTheme: const AppBarTheme(
     elevation: 0,
     titleTextStyle: TextStyle(
@@ -104,7 +104,7 @@ final mainThemeData = ThemeData(
 );
 
 const _colorScheme = ColorScheme(
-  brightness: Brightness.dark,
+  brightness: Brightness.light,
   primary: MainStyleConstants.darkGrey,
   onPrimary: MainStyleConstants.lightGrey,
   primaryContainer: MainStyleConstants.lightBlue,

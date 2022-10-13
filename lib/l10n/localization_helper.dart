@@ -10,3 +10,7 @@ AppLocalizations getLocalizations(BuildContext context) {
   if (localizations != null) return localizations;
   return AppLocalizationsEn();
 }
+
+extension ContextExt on BuildContext {
+  AppLocalizations get strings => getLocalizations(this);
+}

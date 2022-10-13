@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class NotificationsTab extends StatefulWidget {
@@ -12,6 +10,11 @@ class NotificationsTab extends StatefulWidget {
 class _NotificationsTabState extends State<NotificationsTab> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text(
+        'Notifications Tab',
+        style: Theme.of(context).textTheme.headline1,
+      ),
+    );
   }
 }
