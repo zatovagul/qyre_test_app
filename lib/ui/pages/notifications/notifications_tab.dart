@@ -10,10 +10,9 @@ class NotificationsTab extends StatefulWidget {
 class _NotificationsTabState extends State<NotificationsTab> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         'Notifications Tab',
-        style: Theme.of(context).textTheme.headline1,
       ),
     );
   }
