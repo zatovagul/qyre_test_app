@@ -64,7 +64,7 @@ class CalendarDayView extends StatelessWidget {
   }
 
   Widget _buildToday(BuildContext context) {
-    if (DateUtil.isToday(date)) return const SizedBox();
+    if (!DateUtil.isToday(date)) return const SizedBox();
     final textTheme = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.only(bottom: 2),
