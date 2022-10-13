@@ -5,4 +5,6 @@ class AppImages {
   static const menu = '$_svgDir/menu.svg';
   static const notification = '$_svgDir/notification.svg';
   static const arrowRight = '$_svgDir/arrow_right.svg';
+
+  static const webImage = 'https://i.ibb.co/CsHLc0r/image-1.png';
 }

@@ -114,6 +114,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Complete profile'**
   String get completeProfile;
+
+  /// No description provided for @todaysProduction.
+  ///
+  /// In en, this message translates to:
+  /// **'Today’s productions'**
+  String get todaysProduction;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

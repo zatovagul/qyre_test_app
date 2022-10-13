@@ -15,4 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get completeProfile => 'Complete profile';
+
+  @override
+  String get todaysProduction => 'Today’s productions';
 }

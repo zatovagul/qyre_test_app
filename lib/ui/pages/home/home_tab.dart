@@ -4,12 +4,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../../../constants/app_images.dart';
 import '../../../l10n/localization_helper.dart';
+import '../../../models/production/production_model.dart';
 import '../../../utils/date_util.dart';
 import '../../utils/theme_mixin.dart';
 import '../../views/calendar/calendar_day_small_view.dart';
 import '../../views/calendar/calendar_day_view.dart';
 import '../../views/expand_stack.dart';
+import 'components/production_view.dart';
 import 'components/task_view.dart';
 
 class HomeTab extends StatefulWidget {
@@ -52,9 +55,9 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
               _buildAppBar(),
               _buildCalendar(),
               _buildTasks(),
-              const SliverToBoxAdapter(
-                child: SizedBox(height: 1000),
-              )
+              _sizedBoxSliver(10),
+              _buildProductions(),
+              _sizedBoxSliver(500),
             ],
           ),
           _buildSmallCalendar(),
@@ -173,6 +176,45 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
             const SizedBox(width: 16),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _sizedBoxSliver(double height) {
+    return SliverToBoxAdapter(child: SizedBox(height: height));
+  }
+
+  Widget _buildTitle(String text) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: SizedBox(
+        height: 44,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            text,
+            style: textTheme.headline6,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProductions() {
+    return SliverList(
+      delegate: SliverChildListDelegate(
+        [
+          _buildTitle(context.strings.todaysProduction),
+          ProductionView(
+            production: ProductionModel(
+              url: AppImages.webImage,
+              startDate: DateUtil.today,
+              endDate: DateUtil.today.add(const Duration(days: 5)),
+              name: 'Name name name',
+              country: 'Sweden',
+            ),
+          )
+        ],
       ),
     );
   }
