@@ -102,6 +102,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Today'**
   String get today;
+
+  /// No description provided for @completeYourProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your profile tooptimize your exposure in job searches.'**
+  String get completeYourProfileTitle;
+
+  /// No description provided for @completeProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete profile'**
+  String get completeProfile;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

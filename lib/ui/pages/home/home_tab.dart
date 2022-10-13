@@ -10,6 +10,7 @@ import '../../utils/theme_mixin.dart';
 import '../../views/calendar/calendar_day_small_view.dart';
 import '../../views/calendar/calendar_day_view.dart';
 import '../../views/expand_stack.dart';
+import 'components/task_view.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
@@ -50,6 +51,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
             slivers: [
               _buildAppBar(),
               _buildCalendar(),
+              _buildTasks(),
               const SliverToBoxAdapter(
                 child: SizedBox(height: 1000),
               )
@@ -77,7 +79,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
       builder: (context, expand, child) {
         return ExpandStack(
           expand: expand,
-          child: Container(
+          child: SizedBox(
             height: 46,
             child: Stack(
               children: [
@@ -88,6 +90,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
                     height: 36,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
+                      physics: const BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
                         final date = DateUtil.today.add(Duration(days: index));
                         final child = CalendarDaySmallView(date: date);
@@ -118,6 +121,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
           height: 112,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               final date = DateUtil.today.add(Duration(days: index));
               final child = CalendarDayView(date: date);
@@ -141,6 +145,33 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
         filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
         child: Container(
           color: colorScheme.background.withOpacity(0.9),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTasks() {
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: 156,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          children: [
+            const SizedBox(width: 16),
+            TaskView(
+              title: context.strings.completeYourProfileTitle,
+              progress: 0.7,
+              buttonText: context.strings.completeProfile,
+            ),
+            const SizedBox(width: 10),
+            TaskView(
+              title: context.strings.completeYourProfileTitle,
+              progress: 0.7,
+              buttonText: context.strings.completeProfile,
+            ),
+            const SizedBox(width: 16),
+          ],
         ),
       ),
     );

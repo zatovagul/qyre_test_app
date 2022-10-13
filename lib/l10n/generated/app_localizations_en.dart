@@ -9,4 +9,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get today => 'Today';
+
+  @override
+  String get completeYourProfileTitle => 'Complete your profile tooptimize your exposure in job searches.';
+
+  @override
+  String get completeProfile => 'Complete profile';
 }
