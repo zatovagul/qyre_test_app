@@ -20,18 +20,18 @@ final mainThemeData = ThemeData(
   colorScheme: _colorScheme,
   textTheme: const TextTheme(
     headline1: TextStyle(
-      fontWeight: FontWeight.w500,
-      fontStyle: FontStyle.normal,
-      fontFamily: MainStyleConstants.matterFont,
-      fontSize: 14,
-      color: MainStyleConstants.darkGrey,
-    ),
-    headline2: TextStyle(
       fontWeight: FontWeight.w700,
       fontStyle: FontStyle.normal,
       fontFamily: MainStyleConstants.matterFont,
       fontSize: 16,
-      color: MainStyleConstants.darkGrey,
+      color: MainStyleConstants.white,
+    ),
+    headline2: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 10,
+      color: MainStyleConstants.white,
     ),
     headline3: TextStyle(
       fontWeight: FontWeight.w600,
@@ -76,18 +76,18 @@ final mainThemeData = ThemeData(
       color: MainStyleConstants.white,
     ),
     bodyText1: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontFamily: MainStyleConstants.matterFont,
+      fontSize: 14,
+      color: MainStyleConstants.darkGrey,
+    ),
+    bodyText2: TextStyle(
       fontWeight: FontWeight.w700,
       fontStyle: FontStyle.normal,
       fontFamily: MainStyleConstants.matterFont,
       fontSize: 16,
-      color: MainStyleConstants.white,
-    ),
-    bodyText2: TextStyle(
-      fontWeight: FontWeight.w500,
-      fontStyle: FontStyle.normal,
-      fontFamily: MainStyleConstants.matterFont,
-      fontSize: 10,
-      color: MainStyleConstants.white,
+      color: MainStyleConstants.darkGrey,
     ),
     button: TextStyle(
       fontWeight: FontWeight.w700,

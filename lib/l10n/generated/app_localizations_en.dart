@@ -6,4 +6,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get myAvailabiliy => 'My Availability';
+
+  @override
+  String get today => 'Today';
 }

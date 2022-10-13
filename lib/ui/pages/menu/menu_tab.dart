@@ -10,10 +10,9 @@ class MenuTab extends StatefulWidget {
 class _MenuTabState extends State<MenuTab> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         'Menu Tab',
-        style: Theme.of(context).textTheme.headline1,
       ),
     );
   }
