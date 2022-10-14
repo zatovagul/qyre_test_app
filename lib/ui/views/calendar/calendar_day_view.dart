@@ -57,6 +57,7 @@ class CalendarDayView extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final good = dayStatus == DayStatus.good;
     return Container(
+      key: const Key('circle'),
       height: 8,
       width: 8,
       margin: const EdgeInsets.only(top: 8),
