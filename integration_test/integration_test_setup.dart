@@ -29,18 +29,3 @@ Future<void> move(
   );
   await tester.pumpAndSettle();
 }
-
-Future<void> moveDynamic(
-  WidgetTester tester,
-  Offset downLocation,
-  Offset offset,
-) async {
-  await tester.pump();
-
-  await tester.timedDragFrom(
-    downLocation,
-    offset,
-    const Duration(milliseconds: 800),
-  );
-  await tester.pump();
-}
