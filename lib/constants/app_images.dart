@@ -11,4 +11,5 @@ class AppImages {
   static const jobOffer = '$_svgDir/job_offer_icon.svg';
 
   static const webImage = 'https://i.ibb.co/CsHLc0r/image-1.png';
+  static const webImage2 = 'https://i.ibb.co/dfFGcwG/image-2.png';
 }
