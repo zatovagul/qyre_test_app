@@ -13,6 +13,7 @@ import '../../views/calendar/calendar_day_small_view.dart';
 import '../../views/calendar/calendar_day_view.dart';
 import '../../views/expand_stack.dart';
 import 'components/gradient_card.dart';
+import 'components/job_offer_placeholder.dart';
 import 'components/production_view.dart';
 import 'components/task_view.dart';
 
@@ -59,7 +60,9 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
               _sizedBoxSliver(10),
               _buildProductions(),
               _buildCards(),
-              _sizedBoxSliver(500),
+              _sizedBoxSliver(10),
+              _buildJobOffers(),
+              _sizedBoxSliver(100),
             ],
           ),
           _buildSmallCalendar(),
@@ -259,6 +262,18 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildJobOffers() {
+    return SliverList(
+      delegate: SliverChildListDelegate(
+        [
+          _buildTitle(context.strings.myJobOffers),
+          const JobOfferPlaceHolder(),
+          const SizedBox(height: 10),
+        ],
       ),
     );
   }

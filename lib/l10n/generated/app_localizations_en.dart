@@ -36,4 +36,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get keepYourCvUpdated => 'Kepp your CV updated to get the best offers';
+
+  @override
+  String get myJobOffers => 'My job offers';
+
+  @override
+  String get jobOfferInfo => 'Job offers are shown here! Keep your profile updated to stay relevant for new opportunities.';
+
+  @override
+  String get goToProfile => 'Go to my profile';
 }

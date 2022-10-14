@@ -156,6 +156,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Kepp your CV updated to get the best offers'**
   String get keepYourCvUpdated;
+
+  /// No description provided for @myJobOffers.
+  ///
+  /// In en, this message translates to:
+  /// **'My job offers'**
+  String get myJobOffers;
+
+  /// No description provided for @jobOfferInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Job offers are shown here! Keep your profile updated to stay relevant for new opportunities.'**
+  String get jobOfferInfo;
+
+  /// No description provided for @goToProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to my profile'**
+  String get goToProfile;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
