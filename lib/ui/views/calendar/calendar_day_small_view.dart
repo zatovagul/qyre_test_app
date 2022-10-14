@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../l10n/localization_helper.dart';
+import '../../../models/enums/day_status.dart';
 import '../../../utils/date_util.dart';
 
 class CalendarDaySmallView extends StatelessWidget {
   final DateTime date;
+  final DayStatus? dayStatus;
   const CalendarDaySmallView({
     super.key,
     required this.date,
+    this.dayStatus,
   });
 
   @override
@@ -37,15 +40,16 @@ class CalendarDaySmallView extends StatelessWidget {
   }
 
   Widget _buildCircle(BuildContext context) {
-    // TODO add circle checking
+    if (dayStatus == null) return const SizedBox();
     final colorScheme = Theme.of(context).colorScheme;
+    final good = dayStatus == DayStatus.good;
     return Container(
       height: 8,
       width: 8,
       margin: const EdgeInsets.only(right: 2),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(90),
-        color: colorScheme.error,
+        color: good ? colorScheme.primaryContainer : colorScheme.error,
       ),
     );
   }

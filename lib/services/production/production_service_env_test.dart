@@ -5,7 +5,7 @@ import '../../models/production/production_model.dart';
 import 'production_service.dart';
 
 @Injectable(as: ProductionService, env: [Environment.test])
-class ProductionServiceDev extends ProductionService {
+class ProductionServiceTest extends ProductionService {
   @override
   Future<List<ProductionModel>> getProductions() async {
     final List<ProductionModel> productions = [];

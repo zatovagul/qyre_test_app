@@ -10,7 +10,6 @@ import '../../../bloc/home/home_cubit.dart';
 import '../../../constants/app_images.dart';
 import '../../../di/di.dart';
 import '../../../l10n/localization_helper.dart';
-import '../../../models/production/production_model.dart';
 import '../../../utils/date_util.dart';
 import '../../utils/theme_mixin.dart';
 import '../../views/calendar/calendar_day_small_view.dart';
@@ -69,7 +68,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
                 physics: const BouncingScrollPhysics(),
                 slivers: [
                   _buildAppBar(),
-                  _buildCalendar(),
+                  _buildCalendar(state),
                   _buildTasks(),
                   _sizedBoxSliver(10),
                   _buildProductions(state),
@@ -79,7 +78,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
                   _sizedBoxSliver(100),
                 ],
               ),
-              _buildSmallCalendar(),
+              _buildSmallCalendar(state),
             ],
           );
         },
@@ -97,7 +96,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
     );
   }
 
-  Widget _buildSmallCalendar() {
+  Widget _buildSmallCalendar(HomeState state) {
     return ValueListenableBuilder(
       valueListenable: _expandListenable,
       builder: (context, expand, child) {
@@ -117,7 +116,10 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
                         final date = DateUtil.today.add(Duration(days: index));
-                        final child = CalendarDaySmallView(date: date);
+                        final child = CalendarDaySmallView(
+                          date: date,
+                          dayStatus: state.schedule[date],
+                        );
                         return Padding(
                           padding: EdgeInsets.only(
                             left: index == 0 ? 16 : 0,
@@ -137,7 +139,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
     );
   }
 
-  Widget _buildCalendar() {
+  Widget _buildCalendar(HomeState state) {
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 10),
@@ -148,7 +150,10 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
             physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               final date = DateUtil.today.add(Duration(days: index));
-              final child = CalendarDayView(date: date);
+              final child = CalendarDayView(
+                date: date,
+                dayStatus: state.schedule[date],
+              );
               return Padding(
                 padding: EdgeInsets.only(
                   left: index == 0 ? 16 : 0,
