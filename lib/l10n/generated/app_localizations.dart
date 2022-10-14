@@ -120,6 +120,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Today’s productions'**
   String get todaysProduction;
+
+  /// No description provided for @myNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'My network'**
+  String get myNetwork;
+
+  /// No description provided for @connectYourNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect and grow your network'**
+  String get connectYourNetwork;
+
+  /// No description provided for @quickHire.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick hire'**
+  String get quickHire;
+
+  /// No description provided for @hireSomeone.
+  ///
+  /// In en, this message translates to:
+  /// **'Hire someone quickly today'**
+  String get hireSomeone;
+
+  /// No description provided for @myCv.
+  ///
+  /// In en, this message translates to:
+  /// **'My CV'**
+  String get myCv;
+
+  /// No description provided for @keepYourCvUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Kepp your CV updated to get the best offers'**
+  String get keepYourCvUpdated;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

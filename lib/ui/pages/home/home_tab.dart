@@ -12,6 +12,7 @@ import '../../utils/theme_mixin.dart';
 import '../../views/calendar/calendar_day_small_view.dart';
 import '../../views/calendar/calendar_day_view.dart';
 import '../../views/expand_stack.dart';
+import 'components/gradient_card.dart';
 import 'components/production_view.dart';
 import 'components/task_view.dart';
 
@@ -57,6 +58,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
               _buildTasks(),
               _sizedBoxSliver(10),
               _buildProductions(),
+              _buildCards(),
               _sizedBoxSliver(500),
             ],
           ),
@@ -213,8 +215,50 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
               name: 'Name name name',
               country: 'Sweden',
             ),
-          )
+          ),
+          const SizedBox(height: 10),
         ],
+      ),
+    );
+  }
+
+  Widget _buildCards() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Row(
+          children: [
+            Expanded(
+              child: GradientCard(
+                image: AppImages.persons,
+                title: context.strings.myNetwork,
+                info: context.strings.connectYourNetwork,
+                startColor: colorScheme.tertiary,
+                endColor: colorScheme.onTertiary,
+              ),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: GradientCard(
+                image: AppImages.qyre,
+                title: context.strings.quickHire,
+                info: context.strings.hireSomeone,
+                startColor: colorScheme.secondary,
+                endColor: colorScheme.onSecondary,
+              ),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: GradientCard(
+                image: AppImages.document,
+                title: context.strings.myCv,
+                info: context.strings.keepYourCvUpdated,
+                startColor: colorScheme.surface,
+                endColor: colorScheme.onSurface,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

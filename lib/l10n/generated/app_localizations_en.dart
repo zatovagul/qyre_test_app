@@ -18,4 +18,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get todaysProduction => 'Today’s productions';
+
+  @override
+  String get myNetwork => 'My network';
+
+  @override
+  String get connectYourNetwork => 'Connect and grow your network';
+
+  @override
+  String get quickHire => 'Quick hire';
+
+  @override
+  String get hireSomeone => 'Hire someone quickly today';
+
+  @override
+  String get myCv => 'My CV';
+
+  @override
+  String get keepYourCvUpdated => 'Kepp your CV updated to get the best offers';
 }
