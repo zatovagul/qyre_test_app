@@ -13,8 +13,10 @@ class DateUtil {
   static String getWeekDay(DateTime date) => _weekDayFormat.format(date);
   static String getMonth(DateTime date) => _monthFormat.format(date);
   static String getDay(DateTime date) => _dayFormat.format(date);
+  static String getDate(DateTime date) => _dateFormat.format(date);
 
   static final _weekDayFormat = DateFormat.E();
   static final _monthFormat = DateFormat.MMM();
   static final _dayFormat = DateFormat.d();
+  static final _dateFormat = DateFormat('MMM d, yyyy');
 }

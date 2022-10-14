@@ -9,4 +9,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get today => 'Today';
+
+  @override
+  String get completeYourProfileTitle => 'Complete your profile tooptimize your exposure in job searches.';
+
+  @override
+  String get completeProfile => 'Complete profile';
+
+  @override
+  String get todaysProduction => 'Today’s productions';
+
+  @override
+  String get myNetwork => 'My network';
+
+  @override
+  String get connectYourNetwork => 'Connect and grow your network';
+
+  @override
+  String get quickHire => 'Quick hire';
+
+  @override
+  String get hireSomeone => 'Hire someone quickly today';
+
+  @override
+  String get myCv => 'My CV';
+
+  @override
+  String get keepYourCvUpdated => 'Kepp your CV updated to get the best offers';
+
+  @override
+  String get myJobOffers => 'My job offers';
+
+  @override
+  String get jobOfferInfo => 'Job offers are shown here! Keep your profile updated to stay relevant for new opportunities.';
+
+  @override
+  String get goToProfile => 'Go to my profile';
 }

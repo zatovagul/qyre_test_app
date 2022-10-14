@@ -102,6 +102,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Today'**
   String get today;
+
+  /// No description provided for @completeYourProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your profile tooptimize your exposure in job searches.'**
+  String get completeYourProfileTitle;
+
+  /// No description provided for @completeProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete profile'**
+  String get completeProfile;
+
+  /// No description provided for @todaysProduction.
+  ///
+  /// In en, this message translates to:
+  /// **'Today’s productions'**
+  String get todaysProduction;
+
+  /// No description provided for @myNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'My network'**
+  String get myNetwork;
+
+  /// No description provided for @connectYourNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect and grow your network'**
+  String get connectYourNetwork;
+
+  /// No description provided for @quickHire.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick hire'**
+  String get quickHire;
+
+  /// No description provided for @hireSomeone.
+  ///
+  /// In en, this message translates to:
+  /// **'Hire someone quickly today'**
+  String get hireSomeone;
+
+  /// No description provided for @myCv.
+  ///
+  /// In en, this message translates to:
+  /// **'My CV'**
+  String get myCv;
+
+  /// No description provided for @keepYourCvUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Kepp your CV updated to get the best offers'**
+  String get keepYourCvUpdated;
+
+  /// No description provided for @myJobOffers.
+  ///
+  /// In en, this message translates to:
+  /// **'My job offers'**
+  String get myJobOffers;
+
+  /// No description provided for @jobOfferInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Job offers are shown here! Keep your profile updated to stay relevant for new opportunities.'**
+  String get jobOfferInfo;
+
+  /// No description provided for @goToProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to my profile'**
+  String get goToProfile;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
