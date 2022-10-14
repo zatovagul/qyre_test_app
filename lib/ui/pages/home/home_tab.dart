@@ -72,6 +72,7 @@ class _HomeTabState extends State<HomeTab> with ThemeMixin {
                   _buildTasks(),
                   _sizedBoxSliver(10),
                   _buildProductions(state),
+                  _sizedBoxSliver(10),
                   _buildCards(),
                   _sizedBoxSliver(10),
                   _buildJobOffers(),
